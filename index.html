@@ -69,9 +69,9 @@
           </div>
           <div class="friends">
             <ul>
-              <li v-for="friend in friends">
-                My Name is {{friend.name}}, I am {{friend.age}} and here is my
-                job status {{friend.job}}
+              <li v-for="(friend, index) in friends">
+                <span :class="bgp">{{index}}</span> My Name is {{friend.name}},
+                I am {{friend.age}} and here is my job status {{friend.job}}
               </li>
             </ul>
           </div>

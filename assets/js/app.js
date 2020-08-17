@@ -11,6 +11,7 @@ new Vue({
     age: "25",
     btnp: "btn btn-primary",
     btnd: "btn btn-danger",
+    bgp: "badge bg-primary",
     coords: {
       x: 0,
       y: 0,
