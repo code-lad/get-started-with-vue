@@ -5,3 +5,13 @@
   border: 1px solid #333;
   margin: 0 0 1em 0;
 }
+.footer {
+  border-top: 1px solid #ddd;
+  padding: 2em;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+.footer img {
+  width: 150px;
+}

@@ -11,20 +11,20 @@
     <div class="container" id="app">
       <h1>{{title1}}</h1>
       <div class="row">
-        <div class="col-sm-12 col-lg-4">
+        <div class="col-sm-12 col-lg-6">
           <h2>{{title2}}</h2>
           <p>My name is {{fname}}</p>
           <p>My surname is {{lname}}</p>
           <p>I am {{age}} years old</p>
         </div>
-        <div class="col-sm-12 col-lg-4">
+        <div class="col-sm-12 col-lg-6">
           <h2>{{title3}}</h2>
           <!-- Update Name Using Keyup Keyboard Event -->
           <input type="text" @keyup="updateName" :value="fname" />
           <!-- Update Name Using Model -->
           <input type="text" v-model="lname" />
           <hr />
-          <button :class="btnd" v-on:click="changeAge(1)">
+          <button :class="btnd" v-on:click=" changeAge(1)">
             decrement age -1
           </button>
           <button :class="btnp" v-on:click="changeAge(-1)">
@@ -39,15 +39,47 @@
           </button>
           <hr />
         </div>
-        <div class="col-sm-12 col-lg-4">
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-6">
           <h2>{{title4}}</h2>
           <button :class="btnp" @click="logEvent">Log Event</button>
           <hr />
           <div class="canvas" @mousemove="logCoords">
             {{coords.x}},{{coords.y}}
           </div>
+          <hr />
+          <!-- Listen when Alt key is pressed -->
+          <button :class="btnp" @click.alt="logMessage">Alt Click</button>
+          <button :class="btnp" @click.shift="logMessage">Shift Click</button>
+          <a href="http://www.google.com" @click.prevent="logMessage">Google</a>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <h2>{{title5}}</h2>
+          <button :class="btnp" @click="toggleMessage">
+            Show Message: {{showMessage}}
+          </button>
+          <p v-if="showMessage">These are basics about the power of Vue</p>
+          <p>5000</p>
+          <h3>Rendering Items</h3>
+          <div class="fruits">
+            <ol>
+              <li v-for="item in fruits">{{item}}</li>
+            </ol>
+          </div>
+          <div class="friends">
+            <ul>
+              <li v-for="friend in friends">
+                My Name is {{friend.name}}, I am {{friend.age}} and here is my
+                job status {{friend.job}}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="footer">
+      <img src="./assets/img/vuejs.png" alt="vue logo" />
     </div>
 
     <script src="./assets/js/vue.js"></script>
