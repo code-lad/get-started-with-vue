@@ -10,7 +10,10 @@ new Vue({
     age: "25",
     btnp: "btn btn-primary",
     btnd: "btn btn-danger",
-    coords: [(x = 0), (y = 0)],
+    coords: {
+      x: 0,
+      y: 0,
+    },
   },
   methods: {
     changeAge(amount) {
@@ -18,6 +21,14 @@ new Vue({
     },
     logEvent(event) {
       console.log(event);
+    },
+    logCoords(e) {
+      this.coords.x = e.offsetX;
+      this.coords.y = e.offsetY;
+    },
+    updateName(e) {
+      ///console.log(e.target.value);
+      this.fname = e.target.value;
     },
   },
 });

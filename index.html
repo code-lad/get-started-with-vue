@@ -19,8 +19,10 @@
         </div>
         <div class="col-sm-12 col-lg-4">
           <h2>{{title3}}</h2>
-          <input type="text" :value="fname" />
-          <input type="text" :value="lname" />
+          <!-- Update Name Using Keyup Keyboard Event -->
+          <input type="text" @keyup="updateName" :value="fname" />
+          <!-- Update Name Using Model -->
+          <input type="text" v-model="lname" />
           <hr />
           <button :class="btnd" v-on:click="changeAge(1)">
             decrement age -1
@@ -29,11 +31,11 @@
             increment age +1
           </button>
           <hr />
-          <button :class="btnd" v-on:click="changeAge(10)">
-            decrement age -10
+          <button :class="btnd" v-on:dblclick="changeAge(10)">
+            double click decrement age -10
           </button>
-          <button :class="btnp" v-on:click="changeAge(-20)">
-            increment age +20
+          <button :class="btnp" v-on:dblclick="changeAge(-20)">
+            double click increment age +20
           </button>
           <hr />
         </div>
@@ -41,7 +43,9 @@
           <h2>{{title4}}</h2>
           <button :class="btnp" @click="logEvent">Log Event</button>
           <hr />
-          <div class="canvas"></div>
+          <div class="canvas" @mousemove="logCoords">
+            {{coords.x}},{{coords.y}}
+          </div>
         </div>
       </div>
     </div>
