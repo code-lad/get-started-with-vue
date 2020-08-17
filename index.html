@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>vue</title>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <h1>{{title1}}</h1>
+      <div class="row">
+        <div class="col-sm-12 col-lg-4">
+          <h2>{{title2}}</h2>
+          <p>My name is {{fname}}</p>
+          <p>My surname is {{lname}}</p>
+          <p>I am {{age}} years old</p>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <h2>{{title3}}</h2>
+          <input type="text" :value="fname" />
+          <input type="text" :value="lname" />
+          <hr />
+          <button :class="btnd" v-on:click="changeAge(1)">
+            decrement age -1
+          </button>
+          <button :class="btnp" v-on:click="changeAge(-1)">
+            increment age +1
+          </button>
+          <hr />
+          <button :class="btnd" v-on:click="changeAge(10)">
+            decrement age -10
+          </button>
+          <button :class="btnp" v-on:click="changeAge(-20)">
+            increment age +20
+          </button>
+          <hr />
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <h2>{{title4}}</h2>
+          <button :class="btnp" @click="logEvent">Log Event</button>
+          <hr />
+          <div class="canvas"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/vue.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
