@@ -23,6 +23,7 @@
           <input type="text" @keyup="updateName" :value="fname" />
           <!-- Update Name Using Model -->
           <input type="text" v-model="lname" />
+          <input type="number" v-model="age" />
           <hr />
           <button :class="btnd" v-on:click=" changeAge(1)">
             decrement age -1
