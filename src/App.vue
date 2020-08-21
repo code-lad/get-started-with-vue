@@ -40,6 +40,7 @@ body {
 .app__logo {
   position: absolute;
   top: 20px;
+  left: 20px;
 }
 .app__logo img {
   width: 50px;

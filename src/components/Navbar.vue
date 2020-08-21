@@ -30,7 +30,7 @@ export default {
 <style>
 .navbar {
   text-align: center;
-  background-color: aquamarine;
+  background-color: #242f3a;
   padding: 20px;
 }
 nav ul {
@@ -40,5 +40,11 @@ nav li {
   list-style: none;
   display: inline-block;
   margin-right: 10px;
+}
+nav li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #41b883;
+  font-weight: 600;
 }
 </style>
