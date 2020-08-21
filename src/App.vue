@@ -7,7 +7,6 @@
     <div class="app__body">
       <Blogs />
     </div>
-    <Blogs />
   </div>
 </template>
 
