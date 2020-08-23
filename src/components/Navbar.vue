@@ -9,7 +9,7 @@
           <router-link :to="{name: 'About'}">About</router-link>
         </li>
         <li>
-          <router-link to>Contact</router-link>
+          <router-link :to="{name:'Contact'}">Contact</router-link>
         </li>
       </ul>
     </nav>
