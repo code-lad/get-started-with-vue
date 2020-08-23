@@ -1,10 +1,18 @@
 <template>
   <div class="navbar">
-    <h2></h2>
-    <div id="nav">
-      <route-link to="../views/Home.vue">Home</route-link>|
-      <route-link to="../views/About.vue">About</route-link>
-    </div>
+    <nav>
+      <ul>
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'About'}">About</router-link>
+        </li>
+        <li>
+          <router-link to>Contact</router-link>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 <script>
@@ -20,8 +28,19 @@ export default {
   background-color: lightgray;
   text-align: center;
 }
-#nav route-link {
+nav {
+  padding: 20px;
+}
+nav ul li {
+  display: inline-block;
   margin-right: 10px;
-  font-size: 20px;
+}
+nav ul li a {
+  font-size: 25px;
+  text-decoration: none;
+  color: #35495e;
+}
+nav ul li:hover {
+  border-bottom: 2px solid #41b883;
 }
 </style>
