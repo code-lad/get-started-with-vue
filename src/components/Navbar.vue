@@ -11,6 +11,9 @@
         <li>
           <router-link :to="{name:'Contact'}">Contact</router-link>
         </li>
+        <li>
+          <router-link :to="{name:'ViewProfile'}">ViewProfile</router-link>
+        </li>
       </ul>
     </nav>
   </div>

@@ -24,6 +24,11 @@ const routes = [
     name: "Contact",
     component: () => import("../views/Contact.vue"),
   },
+  {
+    path: "/viewprofile/:user_id",
+    name: "ViewProfile",
+    component: () => import("../components/ViewProfile.vue"),
+  },
 ];
 
 const router = new VueRouter({
